@@ -75,6 +75,17 @@ if (isset($_POST['username'], $_POST['userpass'])) {
                 <input type="password" name="userpass">
                 <input type="submit" value="Log in">
             </form>
+            <ul id="imgList">
+                <?php
+                /*Added a loop that iterates through the img folder, and adds each element into the img list*/
+                $dir = new DirectoryIterator("uploadedFiles");
+                foreach ($dir as $fileinfo) {
+                    if (!$fileinfo->isDot()) {
+                    echo "<li><img src=\"uploadedFiles/" . $fileinfo->getFilename() . "\"></li>";
+                    }
+                }
+                ?>
+            </ul>
         </div>
         <?php include("footer.php"); ?>
     </body>

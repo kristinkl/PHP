@@ -74,3 +74,17 @@ a:active {
 .lab1__message {
     height: 50px;
 }
+
+
+#imgList{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+#imgList img {
+    width: 300px;
+    margin-left: 10px;
+}
